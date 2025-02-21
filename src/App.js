@@ -5,7 +5,7 @@ import About from './components/AboutMe';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
-import StarsBackground from './components/StarsBackground'; // Import stars background
+import StarBackground from './components/StarsBackground';
 import headshot from './assets/images/headshot.JPG';
 
 import './App.css';
@@ -14,7 +14,7 @@ function App() {
     return (
         <Router>
             <div>
-                <StarsBackground />
+                <StarBackground />
                 <Header />
                 <main>
                     <Routes>

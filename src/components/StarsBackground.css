@@ -6,7 +6,7 @@
     left: 0;
     overflow: hidden;
     z-index: -1;  /* Keep it behind content */
-    background: rgb(18, 15, 34);
+    background: rgb(2, 19, 40);
 }
 
 .star {
