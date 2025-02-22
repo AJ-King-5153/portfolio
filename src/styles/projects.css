@@ -63,6 +63,24 @@
   margin-bottom: 1.5rem;
 }
 
+.project-tech {
+  color: var(--color-accent);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-links a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  color: var(--color-text);
+}
+
 .project-highlights {
   color: #e0e0e0;
   list-style: none;

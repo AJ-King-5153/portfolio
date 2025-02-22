@@ -5,7 +5,7 @@ import About from './components/AboutMe';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Contact from './components/Contacts';
-import StarBackground from './components/StarsBackground';
+import AnimatedBackground from './components/AnimatedBackground';
 import headshot from './assets/images/headshot.JPG';
 import { Link } from 'react-router-dom';
 import VisitorStats from './components/VisitorStats';
@@ -16,7 +16,7 @@ function App() {
     return (
         <Router>
             <div className="app-container">
-                <StarBackground />
+                <AnimatedBackground />
                 <Header />
                 <main>
                     <Routes>

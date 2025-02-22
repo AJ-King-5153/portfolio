@@ -3,7 +3,7 @@
 
 .app-container {
     min-height: 100vh;
-    padding-top: 60px; /* Account for fixed header */
+    padding-top: 80px; /* Increased padding for header */
 }
 
 /* Enhanced Home Container */
@@ -12,14 +12,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 60px);
-    padding: 2rem;
+    min-height: calc(100vh - 80px); /* Adjust for header height */
     position: relative;
+    padding: 2rem;
+    margin-top: 20px; /* Add margin to push content down */
 }
 
 .profile-section {
     text-align: center;
     animation: fadeIn 1s ease-out;
+    padding-top: 60px;
 }
 
 /* Enhanced Profile Image */
@@ -41,45 +43,53 @@
 
 /* Name and Title Styling */
 .name {
-    font-size: 2.5rem;
-    color: #ecf0f1;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
 .title {
-    font-size: 1.2rem;
-    color: #a3c2eb;
-    margin-bottom: 2rem;
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
     font-weight: 400;
-    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+    opacity: 1;
+    text-shadow: 0 1px 10px rgba(100, 255, 218, 0.2);
 }
 
 /* Call-to-Action Buttons */
 .cta-buttons {
     display: flex;
     gap: 1rem;
+    margin-bottom: 3rem; /* Added margin bottom */
 }
 
 .cta-button {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
     padding: 0.8rem 1.8rem;
     border-radius: 25px;
-    font-weight: 500;
-    text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 1rem;
 }
 
 .cta-button.primary {
-    background: #a3c2eb;
-    color: #2c3e50;
+    background: var(--color-accent);
+    color: var(--color-background);
+    font-weight: 600;
 }
 
 .cta-button.secondary {
     background: transparent;
-    color: #a3c2eb;
-    border: 2px solid #a3c2eb;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
 }
 
 .cta-button:hover {
@@ -122,4 +132,36 @@
         width: 100%;
         text-align: center;
     }
+}
+
+/* Adjust visitor stats spacing */
+.visitor-stats {
+    margin-top: 3rem; /* Increased margin */
+    padding: 1.5rem;
+    background: var(--color-overlay);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 15px;
+}
+
+/* Visitor stats typography */
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+}
+
+.stat-label {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-icon {
+    color: var(--color-accent);
 } 

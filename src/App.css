@@ -82,19 +82,19 @@ main {
 #about h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: #fff;
 }
 
 #about p {
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #555;
+  color: #e0e0e0;
 }
 
 #about h3 {
   font-size: 1.5rem;
   margin-top: 20px;
-  color: #2c3e50;
+  color: #fff;
 }
 
 #about ul {
@@ -104,6 +104,7 @@ main {
 
 #about ul li {
   margin-bottom: 10px;
+  color: #e0e0e0;
 }
 
 /* Footer Styles */
@@ -133,6 +134,15 @@ footer {
   z-index: 1;
   border: 5px solid #a3c2eb;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile section text colors */
+.name {
+  color: #fff;
+}
+
+.title {
+  color: #e0e0e0;
 }
 
 

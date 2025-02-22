@@ -17,8 +17,9 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(44, 62, 80, 0.95);
-    backdrop-filter: blur(8px);
+    background: var(--color-overlay);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
     padding: 0.5rem 0;
@@ -62,14 +63,14 @@ nav li {
 }
 
 nav a {
-    font-family: 'Poppins', sans-serif;
-    color: #ecf0f1;
-    text-decoration: none;
+    font-family: var(--font-primary);
     font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    padding: 0.5rem 0;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
     transition: all 0.3s ease;
+    letter-spacing: 0.02em;
 }
 
 nav a::after {
@@ -79,12 +80,12 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: #a3c2eb;
+    background: var(--color-accent);
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #a3c2eb;
+    color: var(--color-accent);
 }
 
 nav a:hover::after {
@@ -92,13 +93,13 @@ nav a:hover::after {
 }
 
 nav a.active {
-    color: #a3c2eb;
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--color-accent);
 }
 
 nav a.active::after {
     width: 100%;
-    background: #a3c2eb;
+    background: var(--color-accent);
 }
 
 /* Add responsive design */
