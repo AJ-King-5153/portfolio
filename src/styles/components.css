@@ -1,0 +1,21 @@
+/* Profile Image Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+/* Profile Image */
+.profile-img {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: -400px;
+  z-index: 1;
+  border: 5px solid #a3c2eb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} 

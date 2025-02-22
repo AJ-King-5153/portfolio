@@ -1,17 +1,38 @@
 import React from 'react';
 import ResumePic from '../assets/images/Resume.png';
+import '../styles/resume.css';
 
 const Resume = () => {
     return (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-            <h2>My Resume</h2>
-            <iframe 
-                src={ResumePic}
-                width="80%" 
-                height="600px"
-                style={{ border: '2px solid #5eb954', borderRadius: '10px' }}
-                title="Resume"
-            ></iframe>
+        <div className="resume-wrapper">
+            <div className="resume-header">
+                <h2>My Resume</h2>
+                <a 
+                    href={ResumePic} 
+                    download="Aidan_Boyle_Resume.png"
+                    className="download-button"
+                >
+                    Download Resume
+                </a>
+            </div>
+            
+            <div className="resume-container">
+                <div className="resume-frame">
+                    <img 
+                        src={ResumePic} 
+                        alt="Aidan Boyle's Resume" 
+                        className="resume-image"
+                    />
+                </div>
+                
+                <div className="resume-overlay">
+                    <div className="overlay-content">
+                        <p>Click to view full size</p>
+                        <span>or</span>
+                        <p>Download using the button above</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

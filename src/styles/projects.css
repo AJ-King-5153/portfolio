@@ -1,0 +1,119 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.projects-section h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.projects-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #a3c2eb;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  color: #a3c2eb;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.project-content p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-highlights {
+  color: #e0e0e0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-highlights > li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.project-highlights > li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #a3c2eb;
+}
+
+.design-patterns, .algorithms {
+  list-style: none;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.design-patterns li, .algorithms li {
+  color: #ccc;
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.design-patterns li::before, .algorithms li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #a3c2eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2rem 1rem;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+} 

@@ -1,0 +1,114 @@
+/* Header Styles */
+header {
+  background-color: #597b9d;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Enhanced Navigation Styles */
+nav {
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-heading);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav ul li {
+  display: inline;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: "case" 1;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #a3c2eb;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #a3c2eb;
+  text-decoration: none;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+nav ul li a.active {
+  color: #a3c2eb;
+  font-weight: 600;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Main Content */
+main {
+  padding: 30px;
+  background-color: transparent;
+  flex: 1;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+} 

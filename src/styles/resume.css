@@ -1,0 +1,303 @@
+/* Import fonts if not already imported in base.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.resume-wrapper {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.resume-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: #a3c2eb;
+    margin: 0;
+}
+
+.download-button {
+    background: #a3c2eb;
+    color: #1a1a1a;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid transparent;
+}
+
+.download-button:hover {
+    background: transparent;
+    color: #a3c2eb;
+    border-color: #a3c2eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(163, 194, 235, 0.3);
+}
+
+.resume-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.resume-container:hover {
+    transform: translateY(-5px);
+}
+
+.resume-frame {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.resume-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.resume-image:hover {
+    transform: scale(1.02);
+}
+
+.resume-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.resume-container:hover .resume-overlay {
+    transform: translateY(0);
+}
+
+.overlay-content {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.overlay-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.overlay-content span {
+    display: block;
+    color: #a3c2eb;
+    margin: 0.3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-wrapper {
+        padding: 1rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .resume-header h2 {
+        font-size: 2rem;
+    }
+
+    .resume-frame {
+        height: 60vh;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resume-wrapper {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.resume-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #a3c2eb;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a3c2eb;
+  margin: 0;
+}
+
+.experience-item, .education-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.experience-item:hover, .education-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.company-name, .institution-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.position-title, .degree {
+  font-size: 1.1rem;
+  color: #a3c2eb;
+  margin: 0.5rem 0;
+}
+
+.date-range {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+}
+
+.skill-category h3 {
+  color: #a3c2eb;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  margin: 0.5rem 0;
+  color: #e0e0e0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.skill-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #a3c2eb;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements-list li {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.achievements-list li:hover {
+  transform: translateX(10px);
+}
+
+/* Animation for section entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume-section {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Stagger the animations */
+.resume-section:nth-child(1) { animation-delay: 0.1s; }
+.resume-section:nth-child(2) { animation-delay: 0.2s; }
+.resume-section:nth-child(3) { animation-delay: 0.3s; }
+.resume-section:nth-child(4) { animation-delay: 0.4s; }
