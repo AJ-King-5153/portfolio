@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Visitor = require('../models/Visitor');
+const UAParser = require('ua-parser-js');
 
 // Get visitor statistics
 router.get('/stats', async (req, res) => {
@@ -19,7 +20,8 @@ router.get('/stats', async (req, res) => {
             currentlyViewing: currentlyViewing
         });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error('Error fetching stats:', error);
+        res.status(500).json({ message: "Error fetching statistics" });
     }
 });
 
@@ -27,24 +29,24 @@ router.get('/stats', async (req, res) => {
 router.post('/record', async (req, res) => {
     try {
         const { sessionId } = req.body;
-        const ip = req.ip;
-        const userAgent = req.headers['user-agent'];
+        const parser = new UAParser(req.headers['user-agent']);
+        const userAgent = parser.getResult();
 
-        // Update existing visitor or create new one
         const visitor = await Visitor.findOneAndUpdate(
             { sessionId },
             {
-                ip,
-                userAgent,
+                browser: `${userAgent.browser.name} ${userAgent.browser.major}`,
+                os: userAgent.os.name,
                 lastActive: new Date(),
                 $setOnInsert: { timestamp: new Date() }
             },
             { upsert: true, new: true }
         );
 
-        res.json(visitor);
+        res.json({ success: true });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error('Error recording visit:', error);
+        res.status(500).json({ message: "Error recording visit" });
     }
 });
 
@@ -58,7 +60,8 @@ router.put('/heartbeat', async (req, res) => {
         );
         res.json({ success: true });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error('Error updating heartbeat:', error);
+        res.status(500).json({ message: "Error updating activity" });
     }
 });
 
