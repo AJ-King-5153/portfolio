@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
     margin: 0;
     background: #222;
@@ -11,13 +13,26 @@ body {
 }
 
 header {
-    background: #5eb954;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
 }
 
-header::after {
-    content: '';
-    display: table;
-    clear: both;
+header.scrolled {
+    background: rgba(44, 62, 80, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .TopHead {
@@ -29,51 +44,96 @@ header::after {
 
 nav {
     display: flex;
-    justify-content: center; /* Centers the navigation items horizontally */
-    align-items: center; /* Vertically aligns the items */
-    height: 100%; /* Ensures nav items are vertically centered */
-    float: right;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
 nav ul {
+    display: flex;
+    gap: 3rem;
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; /* Enables flexbox layout for the list items */
-    justify-content: space-evenly; /* Spreads out the items evenly */
-    width: 100%;
 }
 
 nav li {
-    padding-top: 33px;
     position: relative;
 }
 
 nav a {
-    color: #444;
+    font-family: 'Poppins', sans-serif;
+    color: #ecf0f1;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    padding: 0 20px; /* Adds space between the links */
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #a3c2eb;
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #000;
+    color: #a3c2eb;
 }
 
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #444;
-    position: absolute;
-    bottom: 0;
-    width: 0%;
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
+nav a:hover::after {
     width: 100%;
+}
+
+nav a.active {
+    color: #a3c2eb;
+    font-weight: 500;
+}
+
+nav a.active::after {
+    width: 100%;
+    background: #a3c2eb;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+}
+
+/* Animation for page transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Hover effect for better interactivity */
+nav a:hover {
+    transform: translateY(-2px);
 }
 
