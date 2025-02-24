@@ -52,33 +52,22 @@ const Projects = () => {
           <h3>Personal Portfolio Website</h3>
           <div className="project-content">
             <p>
-              A modern, responsive portfolio website built from scratch using React and Node.js. 
-              Features include real-time visitor tracking, animated backgrounds, and a clean, 
-              professional design with smooth transitions and interactions.
+              A responsive portfolio website built with React and Node.js, featuring 
+              visitor analytics, animated elements, and a professional design.
             </p>
             
             <ul className="project-highlights">
-              <li>Built with React for the frontend, utilizing React Router for seamless navigation</li>
-              <li>Backend powered by Node.js and Express, with MongoDB Atlas for visitor tracking</li>
-              <li>Technologies & Features:
+              <li>Frontend built with React and React Router for seamless navigation</li>
+              <li>Node.js/Express backend with MongoDB Atlas integration</li>
+              <li>Key Features:
                 <ul className="design-patterns">
-                  <li>React.js with Hooks and React Router</li>
-                  <li>Node.js & Express.js backend</li>
-                  <li>MongoDB Atlas for database</li>
-                  <li>CSS animations and transitions</li>
-                  <li>Responsive design with CSS Grid and Flexbox</li>
-                  <li>Real-time visitor statistics</li>
-                  <li>Custom animated background effects</li>
-                  <li>Environment variables for secure configuration</li>
+                  <li>Responsive design with CSS Grid/Flexbox</li>
+                  <li>Custom animations and transitions</li>
+                  <li>Real-time visitor tracking</li>
+                  <li>Secure configuration management</li>
                 </ul>
               </li>
             </ul>
-          </div>
-          <div className="project-tech">
-            React • Node.js • Express • MongoDB • CSS3 • HTML5 • JavaScript
-          </div>
-          <div className="project-links">
-            <a href="https://github.com/YourUsername/portfolio" target="_blank" rel="noopener noreferrer">View Source</a>
           </div>
         </div>
       </div>

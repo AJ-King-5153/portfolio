@@ -100,6 +100,16 @@ function AboutMe() {
                                 <li>NumPy</li>
                             </ul>
                         </div>
+                        <div className="skill-category">
+                            <h3>🤖 AI Tools</h3>
+                            <ul>
+                                <li>Anthropic Claude</li>
+                                <li>v0.dev</li>
+                                <li>Cursor.sh</li>
+                                <li>GitHub Copilot</li>
+                                <li>ChatGPT</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
