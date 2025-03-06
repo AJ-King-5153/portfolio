@@ -134,4 +134,13 @@
   .project-card {
     padding: 1.5rem;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
 } 

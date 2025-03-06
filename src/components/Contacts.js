@@ -11,7 +11,7 @@ const Contacts = () => {
                 
                 <div className="contact-cards-container">
                     <a 
-                        href="https://github.com/aidanboyle1" 
+                        href="https://github.com/AJ-King-5153" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="contact-card github"
@@ -19,11 +19,11 @@ const Contacts = () => {
                         <FaGithub className="contact-icon" />
                         <h3>GitHub</h3>
                         <p>Check out my projects and contributions</p>
-                        <span className="contact-link">github.com/aidanboyle1</span>
+                        <span className="contact-link">github.com/AJ-King-5153</span>
                     </a>
 
                     <a 
-                        href="https://www.linkedin.com/in/aidan-boyle-8b3b25223/" 
+                        href="https://www.linkedin.com/in/allan-king-477917172" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="contact-card linkedin"
@@ -31,17 +31,17 @@ const Contacts = () => {
                         <FaLinkedin className="contact-icon" />
                         <h3>LinkedIn</h3>
                         <p>Connect with me professionally</p>
-                        <span className="contact-link">linkedin.com/in/aidan-boyle</span>
+                        <span className="contact-link">linkedin.com/in/allan-king</span>
                     </a>
 
                     <a 
-                        href="mailto:boyle359@umn.edu" 
+                        href="mailto:ajking5153@gmail.com" 
                         className="contact-card email"
                     >
                         <FaEnvelope className="contact-icon" />
                         <h3>Email</h3>
                         <p>Send me a message directly</p>
-                        <span className="contact-link">boyle359@umn.edu</span>
+                        <span className="contact-link">ajking5153@gmail.com</span>
                     </a>
                 </div>
 

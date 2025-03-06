@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .content-block {
+        width: 100%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+} 

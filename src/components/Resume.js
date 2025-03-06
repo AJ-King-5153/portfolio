@@ -9,7 +9,7 @@ const Resume = () => {
                 <h2>My Resume</h2>
                 <a 
                     href={ResumePic} 
-                    download="Aidan_Boyle_Resume.png"
+                    download="Allan_King_Resume.png"
                     className="download-button"
                 >
                     Download Resume
@@ -20,7 +20,7 @@ const Resume = () => {
                 <div className="resume-frame">
                     <img 
                         src={ResumePic} 
-                        alt="Aidan Boyle's Resume" 
+                        alt="Allan King's Resume" 
                         className="resume-image"
                     />
                 </div>

@@ -128,7 +128,13 @@
     }
 
     .resume-frame {
-        height: 60vh;
+        width: 100%;
+        height: auto;
+    }
+
+    .download-button {
+        width: 100%;
+        margin: 1rem 0;
     }
 }
 

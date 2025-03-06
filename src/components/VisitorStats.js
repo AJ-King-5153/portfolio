@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/visitorStats.css';
 
-const API_BASE_URL = 'http://localhost:5000/api/visitors';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api/visitors';
 
 const VisitorStats = () => {
     const [stats, setStats] = useState({

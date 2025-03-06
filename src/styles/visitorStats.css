@@ -46,7 +46,7 @@
 @media (max-width: 768px) {
     .visitor-stats {
         flex-direction: column;
-        gap: 1rem;
+        padding: 1rem;
     }
 
     .stat-item {

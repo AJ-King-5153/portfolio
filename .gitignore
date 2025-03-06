@@ -5,6 +5,9 @@ node_modules/
 /.pnp
 .pnp.js
 
+#backend
+portfolio-backend/.env
+
 # testing
 /coverage
 

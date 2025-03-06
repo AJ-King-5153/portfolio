@@ -74,6 +74,15 @@ function AboutMe() {
                             </ul>
                         </div>
                         <div className="skill-category">
+                            <h3>🔄 Methodologies</h3>
+                            <ul>
+                                <li>Agile</li>
+                                <li>Scrum</li>
+                                <li>Waterfall</li>
+                                <li>Spiral</li>
+                            </ul>
+                        </div>
+                        <div className="skill-category">
                             <h3>🛠️ Developer Tools</h3>
                             <ul>
                                 <li>Windows</li>
@@ -117,7 +126,7 @@ function AboutMe() {
                     <h2>🌟 Interests & Activities</h2>
                     <div className="content-block">
                         <ul>
-                            <li>🏋️ Weightlifting enthusiast</li>
+                            <li>🏋️ Weightlifting</li>
                             <li>💻 Social coding projects contributor</li>
                             <li>🔧 Building and maintaining computers</li>
                             <li>🎮 Former High School Esports coach</li>

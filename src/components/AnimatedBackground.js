@@ -5,10 +5,16 @@ const AnimatedBackground = () => {
     return (
         <div className="animated-background">
             <div className="gradient-sphere"></div>
+            <div className="gradient-sphere secondary"></div>
             <div className="grid"></div>
             <div className="particles">
-                {[...Array(50)].map((_, i) => (
+                {[...Array(150)].map((_, i) => (
                     <div key={i} className="particle"></div>
+                ))}
+            </div>
+            <div className="shooting-stars">
+                {[...Array(5)].map((_, i) => (
+                    <div key={i} className="shooting-star"></div>
                 ))}
             </div>
         </div>
