@@ -20,17 +20,25 @@ const VisitorStats = () => {
         // Record visit
         const recordVisit = async () => {
             try {
-                await fetch(`${API_BASE_URL}/record`, {
-                    method: 'POST',
-                    headers: {
+                const baseUrl = API_BASE_URL.replace('/api/visitors', '');
+                const response = await fetch(`${baseUrl}/api/visitors/record`, {
+                        method: 'POST',
+                        headers: {
                         'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ sessionId }),
+                        },
+                        body: JSON.stringify({ sessionId }),
                 });
-            } catch (error) {
+                if (!response.ok) {
+                    const errorData = await response.text();
+                    console.error('Server response:', errorData);
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('Visit recorded:', data);
+        } catch (error) {
                 console.error('Error recording visit:', error);
-            }
-        };
+        }
+    };
 
         // Fetch stats
         const fetchStats = async () => {
